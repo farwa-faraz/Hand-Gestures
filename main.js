@@ -11,6 +11,14 @@ camera = document.getElementById("camera");
 
 Webcam.attach(camera);
 
+function set_timer()
+{
+    setTimeout(function()  {
+        snapshot()
+    }, 1000);
+
+}
+
 function snapshot()
 {
     Webcam.snap(function(data_uri){
@@ -49,7 +57,7 @@ function gotResults(error, results)
         {
             document.getElementById("emoji").innerHTML = "&#129304;";
             var Speak = window.speechSynthesis;
-            speak_1 = "Thats so cool";
+            speak_1 = "That thing is so cool";
             var text_to_speak = new SpeechSynthesisUtterance(speak_1);
             Speak.speak(text_to_speak);
         }
@@ -58,16 +66,15 @@ function gotResults(error, results)
         {
             document.getElementById("emoji").innerHTML = "&#128076;";
             var Speak = window.speechSynthesis;
-            speak_1 = "Thats Amazing";
+            speak_1 = "That thing is really Amazing";
             var text_to_speak = new SpeechSynthesisUtterance(speak_1);
             Speak.speak(text_to_speak);
-        }
 
         if(prediction_1 == "Victory")
         {
             document.getElementById("emoji").innerHTML = "&#9996;";
             var Speak = window.speechSynthesis;
-            speak_1 = "That was a marvelous victory";
+            speak_1 = "That thing just got the victory";
             var text_to_speak = new SpeechSynthesisUtterance(speak_1);
             Speak.speak(text_to_speak);
         }
@@ -75,9 +82,8 @@ function gotResults(error, results)
         if(prediction_1 == "Excellent")
         {
             document.getElementById("emoji").innerHTML = "&#128077;";
-            document.getElementById("emoji").innerHTML = "&#9996;";
             var Speak = window.speechSynthesis;
-            speak_1 = "That was excellent";
+            speak_1 = "That thing is doing an excellent work";
             var text_to_speak = new SpeechSynthesisUtterance(speak_1);
             Speak.speak(text_to_speak);
         }
@@ -85,9 +91,8 @@ function gotResults(error, results)
         if(prediction_1 == "Angry")
         {
             document.getElementById("emoji").innerHTML = "&#9994;";
-            document.getElementById("emoji").innerHTML = "&#9996;";
             var Speak = window.speechSynthesis;
-            speak_1 = "My mum looks so angry";
+            speak_1 = "That thing is so angry";
             var text_to_speak = new SpeechSynthesisUtterance(speak_1);
             Speak.speak(text_to_speak);
         }
@@ -95,12 +100,12 @@ function gotResults(error, results)
         if(prediction_1 == "Clapping")
         {
             document.getElementById("emoji").innerHTML = "&#128079;";
-            document.getElementById("emoji").innerHTML = "&#9996;";
             var Speak = window.speechSynthesis;
-            speak_1 = "Be happy, everyone is clapping for you";
+            speak_1 = "That thing is clapping";
             var text_to_speak = new SpeechSynthesisUtterance(speak_1);
             Speak.speak(text_to_speak);
         }
     }
 }
 
+}
